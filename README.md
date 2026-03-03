@@ -82,7 +82,7 @@ main/
 ### 2. Clone and open
 
 ```bash
-git clone https://github.com/yourusername/esp32-clock.git
+git clone https://github.com/gbyleveldt/esp32-clock.git
 cd esp32-clock
 code .
 ```
