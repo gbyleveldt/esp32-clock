@@ -125,6 +125,16 @@ idf.py build flash monitor
 
 On first boot with no saved credentials, the device will automatically start in AP mode. Connect to the `ESP32-Clock-Setup` WiFi network and open `http://192.168.4.1` in your browser to configure WiFi credentials, NTP server and UTC offset.
 
+### 7. Enclosure
+
+The `CAD/` folder contains STL files for a 3D printed case designed 
+to fit the ESP32-2424S012 board. There's also a STEP file should you wish to make modifications. The prototype was printed in PLA. A future 
+version will be machined in aluminium.
+
+Printing notes:
+- No supports required
+- 0.2mm layer height recommended
+- The display cutout is designed for a press fit
 ---
 
 ## Usage
