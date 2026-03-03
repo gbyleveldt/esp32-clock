@@ -281,6 +281,16 @@ lv_obj_clear_flag(slider, LV_OBJ_FLAG_GESTURE_BUBBLE);
 | espressif/esp_lcd_touch_cst816s | ^1.0.0 |
 
 ---
+## Acknowledgements
+
+This project was developed with the assistance of [Claude](https://claude.ai) by Anthropic, 
+which provided guidance throughout the entire development process — from setting up the 
+ESP-IDF environment from scratch, through display driver configuration, LVGL graphics, 
+WiFi/NTP implementation, touch driver integration, and UI design.
+
+The gotchas section in particular is a direct result of the iterative debugging process 
+carried out with Claude's assistance. All code was written collaboratively and reviewed 
+for correctness at each step.
 
 ## License
 
