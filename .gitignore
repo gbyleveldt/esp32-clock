@@ -30,7 +30,6 @@ build/
 *.map
 flasher_args.json # Generated in build directory
 sdkconfig.old
-sdkconfig
 
 # ESP-IDF dependencies
 # For older versions or manual component management
@@ -77,3 +76,7 @@ Desktop.ini
 *.suo       # Visual Studio Solution User Options
 *.sln.docstates # Visual Studio
 dependencies.lock
+.clangd
+esp32_clock.code-workspace
+.devcontainer/
+.vscode/
