@@ -187,6 +187,9 @@ error: 'lv_font_montserrat_16' was not declared in this scope;
 did you mean 'lv_font_montserrat_14'?
 ```
 
+### Make sure to use the basic LVGL theme
+Initial attempts at fixing alignment issues on the clock face had me diasbling LVGL default themes. This was a mistake, as the default theme is required for buttons and sliders to work. I've added the sdkconfig file to the repo for reference.
+
 **Fix:** Enable each required font size under Component config → LVGL → Font usage in menuconfig.
 
 ### FreeRTOS tick rate must be 1000Hz for Arduino component

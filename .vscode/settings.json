@@ -7,7 +7,7 @@
     "--compile-commands-dir=/Users/gertbyleveldt/Desktop/Development/ESP32/esp32_clock/esp32_clock/build"
   ],
   "idf.currentSetup": "/Users/gertbyleveldt/.espressif/v5.5.3/esp-idf",
-  "idf.port": "/dev/tty.usbmodem20101",
+  "idf.port": "/dev/tty.usbmodem22301",
   "idf.openOcdConfigs": [
     "board/esp32c3-builtin.cfg"
   ],
