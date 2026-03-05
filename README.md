@@ -186,11 +186,10 @@ Only fonts explicitly enabled in menuconfig are compiled into the firmware. Refe
 error: 'lv_font_montserrat_16' was not declared in this scope;
 did you mean 'lv_font_montserrat_14'?
 ```
+**Fix:** Enable each required font size under Component config → LVGL → Font usage in menuconfig.
 
 ### Make sure to use the basic LVGL theme
 Initial attempts at fixing alignment issues on the clock face had me diasbling LVGL default themes. This was a mistake, as the default theme is required for buttons and sliders to work. I've added the sdkconfig file to the repo for reference.
-
-**Fix:** Enable each required font size under Component config → LVGL → Font usage in menuconfig.
 
 ### FreeRTOS tick rate must be 1000Hz for Arduino component
 The Arduino component requires FreeRTOS to be configured at 1000Hz. The default ESP-IDF tick rate is 100Hz, which causes timing issues with Arduino functions.
