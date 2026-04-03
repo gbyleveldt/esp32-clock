@@ -127,14 +127,13 @@ On first boot with no saved credentials, the device will automatically start in 
 
 ### 7. Enclosure
 
-The `CAD/` folder contains STL files for a 3D printed case designed 
-to fit the ESP32-2424S012 board. There's also a STEP file should you wish to make modifications. The prototype was printed in PLA. A future 
-version will be machined in aluminium.
+The `CAD/` folder contains STL files for a 3D printed case designed to fit the ESP32-2424S012 board. There's also a STEP file should you wish to make modifications. The prototype was printed in PLA. A future version will be machined in aluminium.
 
 Printing notes:
 - No supports required
 - 0.2mm layer height recommended
 - The display cutout is designed for a press fit
+
 ---
 
 ## Usage
@@ -188,8 +187,10 @@ did you mean 'lv_font_montserrat_14'?
 ```
 **Fix:** Enable each required font size under Component config → LVGL → Font usage in menuconfig.
 
-### Make sure to use the basic LVGL theme
-Initial attempts at fixing alignment issues on the clock face had me diasbling LVGL default themes. This was a mistake, as the default theme is required for buttons and sliders to work. I've added the sdkconfig file to the repo for reference.
+### LVGL themes must remain enabled
+Disabling all LVGL themes in menuconfig makes buttons and sliders visually invisible while remaining functional (tappable/draggable). The theme provides the default visual style for interactive widgets.
+
+**Fix:** Keep the Simple or Default theme enabled in menuconfig under Component config → LVGL → Themes.
 
 ### FreeRTOS tick rate must be 1000Hz for Arduino component
 The Arduino component requires FreeRTOS to be configured at 1000Hz. The default ESP-IDF tick rate is 100Hz, which causes timing issues with Arduino functions.
@@ -293,16 +294,15 @@ lv_obj_clear_flag(slider, LV_OBJ_FLAG_GESTURE_BUBBLE);
 | espressif/esp_lcd_touch_cst816s | ^1.0.0 |
 
 ---
-## Acknowledgements
 
-This project was developed with the assistance of [Claude](https://claude.ai) by Anthropic, 
-which provided guidance throughout the entire development process — from setting up the 
-ESP-IDF environment from scratch, through display driver configuration, LVGL graphics, 
-WiFi/NTP implementation, touch driver integration, and UI design.
+## Built With Claude
 
-The gotchas section in particular is a direct result of the iterative debugging process 
-carried out with Claude's assistance. All code was written collaboratively and reviewed 
-for correctness at each step.
+This project was developed collaboratively with [Claude](https://claude.ai) (Anthropic). Claude contributed to the full development stack — ESP-IDF environment setup, display driver configuration, LVGL graphics and UI design, WiFi/NTP implementation, touch driver integration, AP config portal, and NVS settings persistence.
+
+All commits made directly by Claude include the following co-author tag:
+```
+Co-authored-by: Claude (Anthropic) <claude@anthropic.com>
+```
 
 ## License
 
